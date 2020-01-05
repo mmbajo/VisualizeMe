@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A collection of algorithm visualizations.">
+    <meta name="author" content="Mark Bajo">
+
+    <title>Visualize Me!</title>
+
+    <!-- Fonts -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Assistant:300,400,600,700" rel="stylesheet">
+
+   
+
+    <!-- Home Page CSS -->
+    <link rel="stylesheet" type="text/css" href="css/mycss.css">
+
+    <!-- Full Page CSS -->
+    <link rel="stylesheet" type="text/css" href="css/jquery.fullpage.css" />
+
+    <!--Jquery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <!-- Full Page -->
+    <script src="js/jquery.fullpage.js"></script>
+
+
+    <!-- Full Page Setup -->
+    <script type="text/javascript">
+    $(document).ready(function() {
+        $('#fullpage').fullpage({
+            anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage'],
+            menu: '#menu',
+            afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex) {
+                $('.menu-sub li.active').removeClass('active');
+                $('.menu-sub li').eq(slideIndex).addClass('active');
+            }
+
+        });
+
+
+    $('.scroll-down').show("fade");
+    $('.scroll-down').fadeIn(1000).fadeOut(1000).fadeIn(1000).fadeOut(1000).fadeIn(1000);
+
+    });
+    </script>
+
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-155179786-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-155179786-1');
+    </script>
+
+</head>
+
+<body>
+    <div id="background"></div>
+    <div class="header">
+         
+
+    </div>
+    <div class="menu-bottom">
+
+        <ul id="menu">
+            <li data-menuanchor="firstPage" class="active" id='home'><a href="#firstPage">Home</a></li>
+            <li data-menuanchor="secondPage" id="chapter-menu"><a href="#secondPage">Visualizations</a></li>
+        </div></li>
+
+        </ul>
+
+    </div>
+    <div class="content" id="fullpage">
+        <div class="section " id="section0 ">
+            <div class="section-wrapper">
+                <div class="intro">
+                    <h1>Visualize Me!</h1>
+                    <p >A collection of dynamic visualization of algorithms in Computer Science.</p>
+
+                </div>
+                <a href="#secondPage" data-menuanchor="secondPage"><div class="scroll-down"> <img src="img/bottom-arrow.svg"></div></a>
+            </div>
+        </div>
+        <div class="section" id="section1">
+            <div class="chapter-submenu">
+                <ul class="menu-sub">
+                    <li class="active" id='submenu-bp'><a href="#secondPage/chapter1">Gradient Descent Algorithm</a></li>
+                    <li id='submenu-cp'><a href="#secondPage/chapter2">Differential Evolution Algorithm</a></li>
+                    <li id='submenu-pd'><a href="#secondPage/chapter3">Particle Swarm Algorithm</a> </li>
+                    <li id='submenu-fi'><a href="#secondPage/chapter4">A* Algorithm</a> </li>
+                    <li id='submenu-ra'><a href="#secondPage/chapter5">EM Algorithm</a> </li>
+                </ul>
+            </div>
+            <div class='slide-section-wrapper'>
+                <div class="slide" id="chapter1" data-anchor="chapter1">
+                    <div class="chapter-nav">
+                        <div class="left">
+                            <h1>Gradient Descent Algorithm</h1>
+                            <p>Perhaps the most used algorithm in the Machine Learning domain! Here, we examine a simple algorithm that uses slopes to find the maximum or minimum of a function.</p>
+                            </br>
+                            </br>
+                            <a href="algs/GradientDescent/index.html">
+                                <div id="bp" class='rec_button'>The Descent Visualization</div>
+                            </a>
+                        </div>
+                        <div class="right">
+                            <div>
+                                <a href="algs/GradientDescent/index.html">
+                                     <img src="img/gradientDescent/lineplot.gif">
+
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#thirdPage" data-menuanchor="thirdPage"><div class="scroll-down"> <img src="img/bottom-arrow.svg"></div></a>
+                </div>
+                <div class="slide" id="chapter2" data-anchor="chapter2">
+                    <div class="chapter-nav">
+                        <div class="left">
+                            <h1>Differential Evolution Algorithm</h1>
+                            <p>In theory, this algorithm can optimize any objective function given some luck, perhaps some computation resources, and huge amount of time!</p>
+                            </br>
+                            </br>
+                            <a href="algs/GradientDescent/index.html">
+                                <div id="cp" class='rec_button'>The Differential Evolution Visualization</div>
+                            </a>
+                        </div>
+                        <div class="right">
+                            <div>
+                                <a href="algs/GradientDescent/index.html">
+                                     <img src="img/differentialEvolution/ackley.gif">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+                <div class="slide " id="chapter3" data-anchor="chapter3">
+                    <div class="chapter-nav">
+                        <div class="left">
+                            <h1>Particle Swarm Algorithm</h1>
+                            <p>In theory, this algorithm can optimize any objective function given some luck, perhaps some computation resources, and huge amount of time!</p>
+                            </br>
+                            </br>
+                            <a href="algs/GradientDescent/index.html">
+                                <div id="pd" class='rec_button'>The Swarm Visualization</div>
+                            </a>
+                        </div>
+                        <div class="right">
+                            <div>
+                                <a href="algs/GradientDescent/index.html">
+                                     <img src="img/particleSwarm/swarm.gif">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide" id="chapter4" data-anchor="chapter4">
+                    <div class="chapter-nav">
+                        <div class="left">
+                            <h1>A* Algorithm</h1>
+                            <p>Your friendly pathfinding algorithm!</p>
+                            </br>
+                            </br>
+                            <a href="algs/GradientDescent/index.html">
+                                <div id="fi" class='rec_button'>A* Visualization</div>
+                            </a>
+                        </div>
+                        <div class="right">
+                            <div>
+                                <a href="algs/GradientDescent/index.html">
+                                     <img src="img/astar/astar.gif">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide" id="chapter5" data-anchor="chapter5">
+                    <div class="chapter-nav">
+                        <div class="left">
+                            <h1>EM Algorithm</h1>
+                            <p>A clustering algorithm that assumes your data is generated by a multivariate weighted gaussian!</p>
+                            </br>
+                            </br>
+                            <a href="algs/em/index.html">
+                                <div id="ra" class='rec_button'>The EM Visualization</div>
+                            </a>
+                        </div>
+                        <div class="right">
+                            <div>
+                                <a href="algs/GradientDescent/index.html">
+                                     <img src="img/em/em.gif">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- D3 -->
+    <script src="d3/d3.min.js"></script>
+
+    <!-- Home JavaScript -->
+    <script src="js/balls.js"></script>
+
+
+</body>
+
+</html>

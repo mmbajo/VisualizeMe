@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Optimization</title>
+    <!-- Fonts -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Assistant:300,400,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/mycss.css">
+    <!-- Load jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- Load Tensorflow -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@0.13.3/dist/tf.min.js"></script>
+    <!-- Load D3 -->
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <!--Tool Tip-->
+    <script src="js/d3.tip.js"></script>
+    <!--Scroll To-->
+    <script src="js/utils.js"></script>
+</head>
+
+<body style="height:100vh; width:100vw;">
+  <div class="row" id="regression">
+      <div>
+          <h1>Linear Regression with Gradient Descent</h1>
+          <label class="radio-container">
+              <p>Input training set size:
+                <input type="number" value="1000" id="tsize">
+              </p>
+              <p>Enter the noise variance of the true line:
+                <input type="number" value="50" id="variance">
+              </p>
+              <p>Generate random target line:
+                <button class="button-transport" id="generate">
+                   Generate a new true line
+                </button>
+              </p>
+              <p>Learning Rate:
+              <input type="number" id="lrate" value="0.0001">
+              </p>
+          </label>
+
+          <p>Select a batch size to use:
+            <label class="radio-container">
+                <input type="number" value="1" id="bsize">
+            </label>
+          </p>
+          <p>
+            Initialize the slope and intercept of the red line by dragging the red dot on the contour plot.
+          </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="column">
+          <div id="contour"></div>
+          <button class="button-transport" id="reset" title="reset">
+              Reset
+          </button>
+          <button class="button-transport" id="train" title="start">
+              Play
+          </button>
+          <button class="button-transport" id="stop" title="stop">
+              Stop
+          </button>
+      </div>
+      <div class="column">
+          <div id="line"></div>
+      </div>
+      <div class="column">
+          <div id="cost"></div>
+      </div>
+  </div>
+</body>
+
+<!-- JS Libs -->
+<script src="https://d3js.org/d3-contour.v1.min.js"></script>
+<script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3-legend/2.25.6/d3-legend.min.js"></script>
+
+
+<!-- Linear Regression -->
+<script src="js/regression/line.js"></script>
+<script src="js/regression/loss.js"></script>
+<script src="js/regression/optimizer.js"></script>
+<script src="js/regression/viz.js"></script>
+
+</html>

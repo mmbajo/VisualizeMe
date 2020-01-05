@@ -1,0 +1,41 @@
+html,body{
+  height:100%;
+  width:100%;
+}
+.column {
+  float: left;
+  width: 27%;
+
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+line#true,path#true {
+	stroke-width: 2;
+	fill: none;
+	stroke: #111d5e;
+}
+line#estimate, path#estimate {
+	stroke-width: 2;
+	fill: none;
+	stroke: #fa163f;
+}
+
+circle.point {
+	fill: #fa163f;
+	cursor: pointer;
+}
+circle#true {
+	fill: #111d5e;
+	cursor: default;
+}
+circle#estimate {
+	fill: #fa163f;
+	cursor: pointer;
+}
